@@ -18,21 +18,21 @@
 dataStore: mongo
 
 server:
-  port: 8082
+  port: ${PORT}
 
 spring:
   application:
     name: Open mHealth DSU authorisation server
   data:
     mongodb:
-      host: omh-mongo
+      host: ${MONGODB_HOST}
       database: omh
-      #port: 27017
+      #port: ${MONGODB_PORT}
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://omh-postgres:5432/omh
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
   jackson:
     serialization:
       INDENT_OUTPUT: true

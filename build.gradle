@@ -30,6 +30,9 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'spring-boot' // used for auto-configuration
     apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'application' // enable the run target
+
+    mainClassName = 'org.openmhealth.dsu.configuration.Application'
 
     ext {
         gradleVersion = '2.4'
